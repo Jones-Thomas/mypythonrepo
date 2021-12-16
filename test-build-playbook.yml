@@ -1,0 +1,17 @@
+---
+- hosts: all
+  ignore_errors: yes
+  tasks:
+
+  - block:
+    - name: Stop the exists container
+      command: docker stop mypythonappContainer
+    - name: Remove the exists container
+      command: docker rm mypythonappContainer
+    - name: Remove the old Image
+      command: docker rmi jonesthomas/mypythonrepo:latest
+
+  - name: Pull docker image from docker hub
+    command: docker pull jonesthomas/mypythonrepo:latest
+  - name: Create container using the image
+    command: docker run -d  --name mypythonappContainer -p 5000:5000 jonesthomas/mypythonrepo:latest
