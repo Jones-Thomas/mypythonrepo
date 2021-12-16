@@ -17,7 +17,7 @@ spec:
         image: jonesthomas/mypythonrepo:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
    
 # service type loadbalancer
 ---
