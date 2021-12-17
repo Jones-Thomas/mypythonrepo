@@ -13,7 +13,7 @@ spec:
         app: flask-app
     spec:
       containers:
-      - name: test-flask-Container
+      - name: test-flask-container
         image: jonesthomas/mypythonrepo:latest
         imagePullPolicy: Always
         ports:
