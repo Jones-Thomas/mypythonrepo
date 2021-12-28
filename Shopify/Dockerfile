@@ -17,5 +17,5 @@ RUN python -m pip install -r requirements.txt
 CMD ["flask", "run", "--host=0.0.0.0", "-p 5002"]
 
 
-# docker image build -t python-docker .
+# docker image build -t shopify-flask-image  .
 # docker run --name shopify-flask-app --network=host -dit -p 5002:5002 shopify-flask-image
